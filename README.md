@@ -7,3 +7,6 @@ A beginner-friendly Python project that calculates employee bonuses based on the
 - Displays final salary
 - Handles invalid salary
 - Generates summary report
+
+## Project Output
+![Project Output](Employee-Salary-Bonus-System.png)
