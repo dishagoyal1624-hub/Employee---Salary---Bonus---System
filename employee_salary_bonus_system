@@ -1,0 +1,73 @@
+print("******** EMPLOYEE SALARY BONUS REPORT ********")
+total = int(input("Enter total Employees : "))
+bonus_percentage1 = 0
+bonus_percentage2 = 0
+bonus_percentage3 = 0
+bonus_percentage4 = 0
+bonus_percentage = 0
+bonus20_count = 0
+bonus10_count = 0
+bonus5_count = 0
+no_bonus_count = 0
+inavlid_count= 0
+for i in range(total):
+    name = input(f"Enter Employee {i+1} Name : ")
+    salary = int(input("Enter Employee Salary : "))
+    if salary >= 80000:
+        print(f"{name} -> 20% Bonus")
+        bonus_percentage1 = 20
+        bonus20_count += 1
+        print(f"{name}")
+        print(f"Salary : {salary}")
+        print(f"Bonus Percentage : {bonus_percentage1}")
+        bonus_amount = (salary * bonus_percentage1) / 100
+        print(f"Bonus Amount : {int(bonus_amount)}")
+        print(f"Final Salary : {int(salary + bonus_amount)}")
+        print("--------------------------------------")
+    elif salary >= 50000 and salary <= 79999:
+        print(f"{name} -> 10% Bonus")
+        bonus_percentage2 = 10
+        bonus10_count += 1
+        print(f"{name}")
+        print(f"Salary : {salary}")
+        print(f"Bonus Percentage : {bonus_percentage2}")
+        bonus_amount = (salary * bonus_percentage2) / 100
+        print(f"Bonus Amount : {int(bonus_amount)}")
+        print(f"Final Salary : {int(salary + bonus_amount)}")
+        print("--------------------------------------")
+    elif salary >= 30000 and salary <= 49999:
+        print(f"{name} -> 5% Bonus")
+        bonus_percentage3 = 5
+        bonus5_count += 1
+        print(f"{name}")
+        print(f"Salary : {salary}")
+        print(f"Bonus Percentage : {bonus_percentage3}")
+        bonus_amount = (salary * bonus_percentage3) / 100
+        print(f"Bonus Amount : {int(bonus_amount)}")
+        print(f"Final Salary : {int(salary + bonus_amount)}")
+        print("--------------------------------------")
+    elif salary >=0 and salary < 30000:
+        print(f"{name} -> No Bonus")
+        bonus_percentage4 = 0
+        no_bonus_count +=1
+        print(f"{name}")
+        print(f"Salary : {salary}")
+        print(f"Bonus Percentage : {bonus_percentage4}")
+        bonus_amount = (salary * bonus_percentage4) / 100
+        print(f"Bonus Amount : {int(bonus_amount)}")
+        print(f"Final Salary : {int(salary + bonus_amount)}")
+        print("--------------------------------------")
+    else:
+        print("Invalid Salary")
+        inavlid_count += 1
+        print(f"{name}")
+        print(f"Salary : {salary}")
+        print("--------------------------------------")
+print("\n")
+print("******** FINAL BONUS REPORT ********")
+print(f"20% Bonus Employees : {bonus20_count}")
+print(f"10% Bonus Employees : {bonus10_count}")
+print(f"5% Bonus Employees : {bonus5_count}")
+print(f"No Bonus Employees : {no_bonus_count}")
+print(f"Invalid Employees : {inavlid_count}")
+print(f"Total Employees : {total}")
